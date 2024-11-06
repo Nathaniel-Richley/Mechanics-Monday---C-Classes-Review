@@ -1,0 +1,28 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        var tRex = new Dinosaur("Chad", "Tyrannosaurus Rex", new List<string> { "meat" }, 5);
+        var stegosaurus = new Dinosaur("Alex", "Stegosaurus", new List<string> { "plants" }, 7);
+        var pterodactyl = new Dinosaur("Declan", "Pterodactyl", new List<string> { "fish", "meat" }, 3);
+
+        
+        Console.WriteLine($"{tRex.Name} is a {tRex.Species}.");
+
+        tRex.Roar();
+        stegosaurus.Roar();
+        pterodactyl.Roar();
+
+        tRex.Eat("meat");
+        tRex.Eat("plants");
+        stegosaurus.Eat("plants");
+        stegosaurus.Eat("meat");
+
+        tRex.DisplayInfo();
+        stegosaurus.DisplayInfo();
+        pterodactyl.DisplayInfo();
+
+
+
+    }
+}
