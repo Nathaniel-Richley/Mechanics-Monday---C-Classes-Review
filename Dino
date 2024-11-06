@@ -1,0 +1,42 @@
+sing System;
+using System.Collections.Generic;
+
+public class Dinosaur
+{
+    public string Name { get; set; }
+    public string Species { get; set; }
+    public List<string> Diet { get; set; }
+    public int Age { get; set; }
+    public Dinosaur(string name, string species, List<string> diet, int age)
+    {
+        Name = name;
+        Species = species;
+        Diet = diet;
+        Age = age;
+    }
+
+    public void Roar()
+    {
+        Console.WriteLine($"{Name}, the {Species}, lets out a loud roar!");
+    }
+
+    public void Eat(string food)
+    {
+        if (Diet.Contains(food))
+        {
+            Console.WriteLine($"{Name} is eating {food}.");
+        }
+        else
+        {
+            Console.WriteLine($"{Name} can't eat {food}. It's not on the diet!");
+        }
+    }
+
+    public void DisplayInfo()
+    {
+        string diet = string.Join(", ", Diet);
+        Console.WriteLine($"Name: {Name}, Species: {Species}, Diet: {diet}, Age: {Age}");
+    }
+
+
+}
